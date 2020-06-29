@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:orientation="vertical"
+    android:background="@drawable/agrilog_3"
+    android:padding="8dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        android:text="@string/cpf" />
+    <EditText
+        android:id="@+id/edit_cpf"
+        android:layout_width="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="left"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:text="" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
+        android:text="@string/senha" />
+
+
+
+    <EditText
+        android:id="@+id/edit_senha"
+        android:layout_width="300dp"
+        android:layout_marginTop="25sp"
+        android:layout_gravity="left"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:text="" />
+
+    <Button
+        android:id="@+id/button_logar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorAccent"
+        android:onClick="submit"
+        android:textColor="@color/colorLight"
+        android:layout_gravity="center"
+        android:text="@string/button_inscrever" />
+
+    <Button
+        android:id="@+id/button_cadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorSecundaryText"
+        android:onClick="submit"
+        android:textColor="@color/colorLight"
+        android:layout_gravity="center"
+        android:text="@string/button_cadastrar" />
+</LinearLayout>

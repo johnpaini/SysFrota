@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">SysFrota</string>
+    <string name="nome">Nome</string>
+    <string name="cpf">CPF</string>
+    <string name="inscrever">Inscrever</string>
+    <string name="preencha_campos">Preencha os campos</string>
+    <string name="senha">Senha</string>
+    <string name="unidade">Unidade</string>
+    <string name="data">Data</string>
+    <string name="km_inicial">Km Inicial</string>
+    <string name="km_final">Km Final</string>
+    <string name="hora_inicial">Hora Inicial</string>
+    <string name="data_nascimento">Data Nascimento</string>
+    <string name="cadastrar_usuario">Cadastrar Usuario</string>
+
+
+    //Abastecimento
+    <string name="data_abastecimento">Data Abastecimento</string>
+    <string name="local_abastecimento">Local Abastecimento</string>
+    <string name="forma_pagamento">Forma Pagamento</string>
+    <string name="km_abastecimento">KM Abastecimento</string>
+    <string name="litros">Litros Abastecimento</string>
+    <string name="litros_abastecimento">Litros Abastecimento</string>
+    <string name="valor_abastecimento">Valor Abastecimento</string>
+    <string name="cadastrar_abastecimento">Cadastrar Abastecimento</string>
+    <string name="placa_abastecimento">Placa</string>
+    <string name="mes_ano_abastecimento">Mes\Ano</string>
+
+    //Checklist
+    <string name="checklist_documentos">Documentos</string>
+    <string name="responsavel_abastecimento">Responsavel</string>
+    <string name="documentos">Documentos</string>
+    <string name="luzes">Luzes</string>
+    <string name="pneus">Pneus</string>
+    <string name="chave_roda">Chave de Roda</string>
+    <string name="estepe">Estepe</string>
+    <string name="macaco">Macaco</string>
+    <string name="lataria">Lataria</string>
+    <string name="observacoes_gerais">Observações Gerais</string>
+    <string name="cadastrar">Registrar</string>
+
+
+
+
+    <string name="placa">Placa</string>
+    <string name="ano">Ano</string>
+    <string name="modelo">Modelo</string>
+    <string name="cor">Cor</string>
+    <string name="marca">Marca</string>
+    <string name="confirmacao_senha">Confirmar Senha</string>
+    <string name="combustivel">Combustivel</string>
+    <string name="cadastro_usuarios">Cadastro de Usuarios</string>
+    <string name="logar">Entrar</string>
+    <string name="registrar">Registrar</string>
+    <string name="button_cadastrar">Cadastrar</string>
+    <string name="button_inscrever">LOGAR</string>
+
+
+</resources>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:visibility="visible"
+    android:background="@drawable/agrilog_3"
+    tools:context=".CadastroAbastecimentoActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="@string/responsavel_abastecimento"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/edit_responsavel_abastecimento"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="5sp"
+        android:text="" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:text="@string/placa_abastecimento"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/edit_placa_abastecimento"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="5sp"
+        android:text="" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="@string/mes_ano_abastecimento"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/edit_mes_ano_abastecimento"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="5sp"
+        android:text="" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:text="@string/data_abastecimento"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/edit_data_abastecimento"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="5sp"
+        android:text="" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:inputType="datetime"
+        android:text="@string/local_abastecimento"
+        android:textSize="25dp" />
+
+
+    <EditText
+        android:id="@+id/local_abastecimento"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5sp"
+        android:inputType="text"
+        android:text="" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/forma_pagamento"
+        android:textSize="25sp" />
+
+
+    <EditText
+        android:id="@+id/edit_forma_pagamento"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5sp"
+        android:inputType="numberPassword"
+        android:text="" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/km_abastecimento"
+        android:textSize="25sp" />
+
+
+    <EditText
+        android:id="@+id/edit_km_abastecimento"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="5sp"
+        android:inputType="numberSigned"
+        android:text="" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/litros_abastecimento"
+        android:textSize="25sp" />
+
+
+    <EditText
+        android:id="@+id/edit_litros_abastecimento"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5sp"
+        android:inputType="numberSigned"
+        android:text="" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/valor_abastecimento"
+        android:textSize="25sp" />
+    <EditText
+        android:id="@+id/edit_valor_abastecimento"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5sp"
+        android:inputType="numberDecimal"
+        android:text="" />
+
+
+    <Button
+        android:id="@+id/button_cadastrar_abastecimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorAccent"
+        android:onClick="submit"
+        android:text="@string/cadastrar_abastecimento"
+        android:textColor="@color/colorLight" />
+
+
+</LinearLayout>
