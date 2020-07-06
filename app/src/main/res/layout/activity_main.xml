@@ -5,10 +5,10 @@
     android:layout_height="match_parent"
     android:layout_margin="8dp"
     android:orientation="vertical"
-
+        android:background="@color/colorLight"
     android:padding="8dp"
     tools:context=".MainActivity">
-    <!--    android:background="@drawable/abastecimento"-->
+
 
     <TextView
     android:layout_width="wrap_content"

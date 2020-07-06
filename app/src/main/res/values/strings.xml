@@ -15,13 +15,13 @@
 
 
     //Abastecimento
-    <string name="data_abastecimento">Data Abastecimento</string>
-    <string name="local_abastecimento">Local Abastecimento</string>
+    <string name="data_abastecimento">Data</string>
+    <string name="local_abastecimento">Local </string>
     <string name="forma_pagamento">Forma Pagamento</string>
-    <string name="km_abastecimento">KM Abastecimento</string>
-    <string name="litros">Litros Abastecimento</string>
-    <string name="litros_abastecimento">Litros Abastecimento</string>
-    <string name="valor_abastecimento">Valor Abastecimento</string>
+    <string name="km_abastecimento">KM </string>
+    <string name="litros">Litros </string>
+    <string name="litros_abastecimento">Litros </string>
+    <string name="valor_abastecimento">Valor </string>
     <string name="cadastrar_abastecimento">Cadastrar Abastecimento</string>
     <string name="placa_abastecimento">Placa</string>
     <string name="mes_ano_abastecimento">Mes\Ano</string>

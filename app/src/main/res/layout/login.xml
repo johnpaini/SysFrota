@@ -59,7 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:background="@color/colorSecundaryText"
-        android:onClick="submit"
+        android:onClick="onClick"
         android:textColor="@color/colorLight"
         android:layout_gravity="center"
         android:text="@string/button_cadastrar" />

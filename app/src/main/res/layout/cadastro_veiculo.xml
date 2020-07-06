@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="8dp"
     android:orientation="vertical"
-    android:background="@drawable/agrilog_3"
+    android:background="@color/colorLight"
     android:padding="8dp"
     tools:context=".CadastroVeiculoActivity">
+
 
     <TextView
         android:layout_width="match_parent"
@@ -125,3 +129,4 @@
 
 
 </LinearLayout>
+</ScrollView>

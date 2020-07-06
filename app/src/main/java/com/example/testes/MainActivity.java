@@ -7,7 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.github.rtoshiro.util.format.SimpleMaskFormatter;
+import com.github.rtoshiro.util.format.text.MaskTextWatcher;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -37,23 +41,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.mViewHolder.editSenha.setText("");
     }
 
+
+
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.button_logar) {
             String cpf = this.mViewHolder.editCpf.getText().toString();
+           EditText a=  this.mViewHolder.editCpf;
             String senha = this.mViewHolder.editSenha.getText().toString();
+            SimpleMaskFormatter smf=  new SimpleMaskFormatter("NNN.NNN.NNN-NN");
+            MaskTextWatcher mtw = new MaskTextWatcher(a ,smf);
+            a.addTextChangedListener(mtw);
+            Toast.makeText(this, a.toString() , Toast.LENGTH_LONG).show();
+
             if ("".equals(cpf) || "".equals(senha)) {
                 //Mostrar mensagem de campos vazios
                 Toast.makeText(this, this.getString(R.string.preencha_campos), Toast.LENGTH_LONG).show();
             } else {
-                EditText a= (EditText) findViewById(R.id.edit_cpf);
-                String str= a.toString();
+                EditText c = (EditText) findViewById(R.id.edit_cpf);
+                String str= c.toString();
                 EditText b= (EditText) findViewById(R.id.edit_senha);
                 String pass= b.toString();
 
+
+
+
                // helper.encontrarSenha();
 
-                Toast.makeText(this, "Logou", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Que bom que voltou!", Toast.LENGTH_LONG).show();
 
 
                 Intent i = new Intent(MainActivity.this, CadastroAbastecimentoActivity.class);

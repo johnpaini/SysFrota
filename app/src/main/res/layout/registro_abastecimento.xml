@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="8dp"
+    android:background="@color/colorLight"
     android:orientation="vertical"
     android:padding="8dp"
-    android:visibility="visible"
-    android:background="@drawable/agrilog_3"
-    tools:context=".CadastroAbastecimentoActivity">
+    tools:context=".MainActivity">
 
+    <LinearLayout
+        android:id="@+id/Linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
 
     <TextView
         android:layout_width="match_parent"
@@ -30,8 +38,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:text="@string/placa_abastecimento"
         android:textSize="25sp" />
 
@@ -62,8 +70,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:text="@string/data_abastecimento"
         android:textSize="25sp" />
 
@@ -89,7 +97,7 @@
         android:id="@+id/local_abastecimento"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="left"
         android:layout_marginTop="5sp"
         android:inputType="text"
         android:text="" />
@@ -106,7 +114,7 @@
         android:id="@+id/edit_forma_pagamento"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="left"
         android:layout_marginTop="5sp"
         android:inputType="numberPassword"
         android:text="" />
@@ -140,7 +148,7 @@
         android:id="@+id/edit_litros_abastecimento"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="left"
         android:layout_marginTop="5sp"
         android:inputType="numberSigned"
         android:text="" />
@@ -151,11 +159,12 @@
         android:layout_marginTop="10dp"
         android:text="@string/valor_abastecimento"
         android:textSize="25sp" />
+
     <EditText
         android:id="@+id/edit_valor_abastecimento"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="left"
         android:layout_marginTop="5sp"
         android:inputType="numberDecimal"
         android:text="" />
@@ -173,3 +182,6 @@
 
 
 </LinearLayout>
+
+</ScrollView>
+
