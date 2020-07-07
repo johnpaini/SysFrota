@@ -13,27 +13,17 @@ public class Abastecimento {
     String valorAbastecimento;
     String responsavelAbastecimento;
     String formaPagamento;
-    Veiculo veiculo;
-    Usuario usuario;
+    Integer veiculoId;
+    Integer usuarioId;
 
     public void setDataAbastecimento(Date dataAbastecimento) {
         this.dataAbastecimento = dataAbastecimento;
     }
 
-
-
-
-
-    public Veiculo getVeiculo() {
-        return veiculo;
-    }
-
     @Override
     public String toString() {
         return "Abastecimento{" +
-                "veiculo=" + veiculo +
-                ", usuario=" + usuario +
-                ", id=" + id +
+                "id=" + id +
                 ", dataAbastecimento=" + dataAbastecimento +
                 ", kmAbastecimento='" + kmAbastecimento + '\'' +
                 ", litrosAbastecimento='" + litrosAbastecimento + '\'' +
@@ -43,26 +33,26 @@ public class Abastecimento {
                 ", valorAbastecimento='" + valorAbastecimento + '\'' +
                 ", responsavelAbastecimento='" + responsavelAbastecimento + '\'' +
                 ", formaPagamento='" + formaPagamento + '\'' +
+                ", veiculoId=" + veiculoId +
+                ", usuarioId=" + usuarioId +
                 '}';
     }
 
-    public void setVeiculo(Veiculo veiculo) {
-        this.veiculo = veiculo;
+    public Integer getVeiculoId() {
+        return veiculoId;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
+    public void setVeiculoId(Integer veiculoId) {
+        this.veiculoId = veiculoId;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public Integer getUsuarioId() {
+        return usuarioId;
     }
 
-
-
-
-
-
+    public void setUsuarioId(Integer usuarioId) {
+        this.usuarioId = usuarioId;
+    }
 
     public int getId() {
         return id;

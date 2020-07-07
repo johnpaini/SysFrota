@@ -14,9 +14,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
 
+
     private static final String DATABASE_NAME = "sysfrota.db";
-    //usuario
+
+    // Table Names
     private static final String TABLE_USUARIO = "usuario";
+    private static final String TABLE_ABASTECIMENTO = "abastecimento";
+    private static final String TABLE_VEICULO = "veiculo";
+    private static final String TABLE_VISTORIA = "vistoria";
+    private static final String TABLE_ITINERARIO = "itinerario";
+    private static final String TABLE_PERCURSO = "percurso";
+
+    //usuario
+
     private static final String COLUMN_USUARIOIDPK = "id";
     private static final String COLUMN_NOME = "nome";
     private static final String COLUMN_CPF = "cpf";
@@ -25,26 +35,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_UNIDADE = "unidade";
 
     // abastecimento
-    private static final String TABLE_ABASTECIMENTO = "abastecimento";
+
     private static final String COLUMN_ABASTECIMENTOID = "id";
     private static final String COLUMN_DATAABASTECIMENTO = "dataAbastecimento";
     private static final String COLUMN_KMABASTECIMENTO = "kmAbastecimento";
     private static final String COLUMN_LITROSABASTECIMENTO = "litrosAbastecimento";
     private static final String COLUMN_MESANOABASTECIMENTO = "mesAnoAbastecimento";
     private static final String COLUMN_PLACAABASTECIMENTO = "placaAbastecimento";
+    private static final String COLUMN_USUARIOID_FK = "usuarioId";
+    private static final String COLUMN_VEICULOID_FK = "veiculoId";
 
     //Veiculo;
-    private static final String TABLE_VEICULO = "veiculo";
+
     private static final String COLUMN_VEICULOID = "id";
     private static final String COLUMN_CORVEICULO = "cor";
     private static final String COLUMN_PLACAVEICULO = "placa";
     private static final String COLUMN_MARCAVEICULO = "marca";
     private static final String COLUMN_MODELOVEICULO = "modelo";
     private static final String COLUMN_ANOVEICULO = "ano";
-    private static final String TAG = "";
 
     //Vistoria
-    private static final String TABLE_VISTORIA = "vistoria";
+
     private static final String COLUMN_VISTORIAID = "id";
     private static final String COLUMN_DOCUMENTOSVISTORIA = "documentos";
     private static final String COLUMN_LUZESVISTORIA = "luzes";
@@ -55,20 +66,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_LATARIAVISTORIA = "lataria";
     private static final String COLUMN_OBSERVACOESGERAISVISTORIA = "observacoesGerais";
     private static final String COLUMN_DATAVISTORIA = "dataVistoria";
-
+    private static final String COLUMN_VISTORIAUSUARIOID_FK = "usuarioId";
+    private static final String COLUMN_VISTORIAVEICULOID_FK = "veiculoId";
     //Itinerario
-    private static final String TABLE_ITINERARIO = "itinerario";
+
     private static final String COLUMN_ITINERARIOID = "id";
     private static final String COLUMN_CIDADEORIGEMITINERARIO = "cidadeOrigem";
     private static final String COLUMN_CIDADEDESTINOITINERARIO = "cidadeDestino";
 
     //Percurso///
 
-    private static final String TABLE_PERCURSO = "percurso";
+
     private static final String COLUMN_PERCURSOID = "id";
-    private static final String COLUMN_USUARIOIDFK = "usuario";
-    private static final String COLUMN_ITINERARIOIDFK = "itinerario";
-    private static final String COLUMN_VISTORIAIDFK = "vistoria";
+    private static final String COLUMN_PERCURSOUSUARIOID_FK = "usuarioId";
+    private static final String COLUMN_PERCURSOVEICULOID_FK = "veiculoId";
+    private static final String COLUMN_ITINERARIOID_FK = "itinerarioId";
+    private static final String COLUMN_VISTORIAID_FK = "vistoriaId";
     private static final String COLUMN_DATAPERCURSO = "data";
     private static final Integer COLUMN_KMINICIALPERCURSO = Integer.valueOf("kmInicial");
     private static final Integer COLUMN_KMFINALPERCURSO = Integer.valueOf("kmFinal");
@@ -89,28 +102,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-
-    private static final String TABLE_CREATE_USUARIO = "create table usuario (id integer primary key not null auto_increment, " +
-            "nome text not null, cpf integer not null, senha  text not null, dataNascimento text not null, unidade text not null );";
-
-
-    //Corrigir as Propriedades
-    private static final String TABLE_CREATE_VEICULO = "create table veiculo (id integer primary key not null auto_increment, " +
-            "cor text not null,   placa text not null, marca  text not null, modelo text not null, ano integer not null,combustivel text not null );";
-
-    private static final String TABLE_CREATE_VISTORIA = "create table vistoria (id integer primary key not null auto_increment, " +
-            "documentos boolean not null,   luzes boolean not null, pneus boolean not null, chaveRoda boolean not null " +
-            "estepe  boolean not null, macaco boolean not null, lataria boolean not null,  observacoesGerais text not null, dataVistoria date not null, veiculo integer not null );";
-
-
-    private static final String TABLE_CREATE_ABASTECIMENTO = "create table abastecimento (id integer primary key not null auto_increment, " +
-            "nome text not null,   cpf integer not null, senha  text not null, dataNascimento, unidade text not null );";
-
-    private static final String TABLE_CREATE_ITINERARIO = "create table itinerario (id integer primary key not null auto_increment, " +
-            "nome text not null,   cpf integer not null, senha  text not null, dataNascimento, unidade text not null );";
-    private static final String TABLE_CREATE_PERCURSO = "create table percurso (id integer primary key not null auto_increment, " +
-            "nome text not null,   cpf integer not null, senha  text not null, dataNascimento, unidade text not null );";
-
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -123,10 +114,79 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL(TABLE_CREATE_VEICULO);
-        sqLiteDatabase.execSQL(TABLE_CREATE_VISTORIA);
-        sqLiteDatabase.execSQL(TABLE_CREATE_ABASTECIMENTO);
+
+        String TABLE_CREATE_USUARIO = "CREATE TABLE " + TABLE_USUARIO +
+                "(" +
+                COLUMN_USUARIOIDPK + " INTEGER PRIMARY KEY," +
+                COLUMN_NOME + " TEXT" +
+                COLUMN_CPF + " TEXT," +
+                COLUMN_SENHA + " TEXT," +
+                COLUMN_DATA_NASCIMENTO + " TEXT," +
+                COLUMN_UNIDADE + " TEXT," + ")";
+
+        String TABLE_CREATE_VEICULO = "CREATE TABLE " + TABLE_VEICULO +
+                "(" +
+                COLUMN_VEICULOID + " INTEGER PRIMARY KEY," +
+                COLUMN_CORVEICULO + " TEXT" +
+                COLUMN_PLACAVEICULO + " TEXT," +
+                COLUMN_MARCAVEICULO + " TEXT," +
+                COLUMN_MODELOVEICULO + " TEXT," +
+                COLUMN_ANOVEICULO + " TEXT," + ")";
+
+
+        String TABLE_CREATE_ABASTECIMENTO = "CREATE TABLE " + TABLE_ABASTECIMENTO +
+                "(" +
+                COLUMN_ABASTECIMENTOID + " INTEGER PRIMARY KEY," +
+                COLUMN_DATAABASTECIMENTO + " TEXT" +
+                COLUMN_KMABASTECIMENTO + " TEXT," +
+                COLUMN_SENHA + " TEXT," +
+                COLUMN_LITROSABASTECIMENTO + " TEXT," +
+                COLUMN_MESANOABASTECIMENTO + " TEXT," +
+                COLUMN_PLACAABASTECIMENTO + " TEXT," +
+                COLUMN_USUARIOID_FK + "INTEGER REFERENCES " + TABLE_USUARIO + "," + // Define a foreign key
+                COLUMN_VEICULOID_FK + "INTEGER REFERENCES " + TABLE_VEICULO + "," + ")";
+
+        String TABLE_CREATE_VISTORIA = "CREATE TABLE " + TABLE_VISTORIA +
+                "(" +
+                COLUMN_VISTORIAID + " INTEGER PRIMARY KEY," +
+                COLUMN_DOCUMENTOSVISTORIA + " TEXT" +
+                COLUMN_LUZESVISTORIA + " TEXT," +
+                COLUMN_PNEUSVISTORIA + " TEXT," +
+                COLUMN_CHAVERODAVISTORIA + " TEXT," +
+                COLUMN_ESTEPEVISTORIA + " TEXT," +
+                COLUMN_MACACOVISTORIA + " TEXT," +
+                COLUMN_LATARIAVISTORIA + " TEXT," +
+                COLUMN_OBSERVACOESGERAISVISTORIA + " TEXT," +
+                COLUMN_DATAVISTORIA + " TEXT," +
+                COLUMN_ANOVEICULO + " TEXT," +
+                COLUMN_VISTORIAUSUARIOID_FK + "INTEGER REFERENCES " + TABLE_USUARIO + "," + // Define a foreign key
+                COLUMN_VISTORIAVEICULOID_FK + "INTEGER REFERENCES " + TABLE_VEICULO + "," + ")";
+
+        String TABLE_CREATE_ITINERARIO = "CREATE TABLE " + TABLE_VISTORIA +
+                "(" +
+                COLUMN_ITINERARIOID + " INTEGER PRIMARY KEY," +
+                COLUMN_CIDADEORIGEMITINERARIO + " TEXT" +
+                COLUMN_CIDADEDESTINOITINERARIO + " TEXT," + ")";
+
+
+        String TABLE_CREATE_PERCURSO = "CREATE TABLE " + TABLE_PERCURSO +
+                "(" +
+                COLUMN_PERCURSOID + " INTEGER PRIMARY KEY," +
+                COLUMN_DATAPERCURSO + " TEXT" +
+                COLUMN_KMINICIALPERCURSO + " TEXT," +
+                COLUMN_KMFINALPERCURSO + " TEXT," +
+                COLUMN_KMTOTALPERCURSO + " TEXT," +
+                COLUMN_HORAINICIALPERCURSO + " TEXT," +
+                COLUMN_HORAFINALPERCURSO + " TEXT," +
+                COLUMN_PERCURSOUSUARIOID_FK + "INTEGER REFERENCES " + TABLE_USUARIO + "," + // Define a foreign key
+                COLUMN_PERCURSOVEICULOID_FK + "INTEGER REFERENCES " + TABLE_VEICULO + "," +
+                COLUMN_ITINERARIOID_FK + "INTEGER REFERENCES " + TABLE_ITINERARIO + "," +
+                COLUMN_VISTORIAID_FK + "INTEGER REFERENCES " + TABLE_VISTORIA + "," + ")";
+
         sqLiteDatabase.execSQL(TABLE_CREATE_USUARIO);
+        sqLiteDatabase.execSQL(TABLE_CREATE_VISTORIA);
+        sqLiteDatabase.execSQL(TABLE_CREATE_VEICULO);
+        sqLiteDatabase.execSQL(TABLE_CREATE_ABASTECIMENTO);
         sqLiteDatabase.execSQL(TABLE_CREATE_ITINERARIO);
         sqLiteDatabase.execSQL(TABLE_CREATE_PERCURSO);
         this.db = db;
@@ -135,14 +195,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public void RegistrarUsuario(Usuario user) {
         db = this.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put(COLUMN_NOME, user.getNome());
-        values.put(COLUMN_CPF, user.getCpf());
-        values.put(COLUMN_DATA_NASCIMENTO, user.getDataNascimento());
-        values.put(COLUMN_SENHA, user.getSenha());
-        values.put(COLUMN_UNIDADE, user.getUnidade());
+        db.beginTransaction();
+        try{
 
-        db.insert(TABLE_USUARIO, null, values);
+            ContentValues values = new ContentValues();
+            values.put(COLUMN_NOME, user.getNome());
+            values.put(COLUMN_CPF, user.getCpf());
+            values.put(COLUMN_DATA_NASCIMENTO, user.getDataNascimento());
+            values.put(COLUMN_SENHA, user.getSenha());
+            values.put(COLUMN_UNIDADE, user.getUnidade());
+            db.insert(TABLE_USUARIO, null, values);
+            db.setTransactionSuccessful();
+
+
+        }catch (Exception e){
+            Log.d( "ALERTA", "Erro ao Registrar Usuario");
+        }finally {
+            db.endTransaction();
+        }
+
+
 
     }
 
@@ -185,7 +257,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
             //Inserir Comandos de Banco put
         } catch (Exception e) {
-            Log.d(TAG, "Erro ao Registrar Abastecimento");
+            Log.d( "ALERTA", "Erro ao Registrar Abastecimento");
 
         }
     }
