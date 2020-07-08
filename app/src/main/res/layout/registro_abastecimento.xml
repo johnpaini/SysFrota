@@ -11,14 +11,15 @@
     android:background="@color/colorLight"
     android:orientation="vertical"
     android:padding="8dp"
-    tools:context=".MainActivity">
+    tools:context=".CadastroAbastecimentoActivity">
 
-    <LinearLayout
-        android:id="@+id/Linear"
-        android:layout_width="match_parent"
+
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical" />
-
+        android:layout_gravity="center"
+        android:text="@string/cadastrar_abastecimento"
+        android:textSize="25sp" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -116,7 +117,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:layout_marginTop="5sp"
-        android:inputType="numberPassword"
+        android:inputType="text"
         android:text="" />
 
     <TextView

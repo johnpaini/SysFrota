@@ -6,6 +6,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import android.widget.Toast;
+
+import com.example.testes.R;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -17,7 +20,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DATABASE_NAME = "sysfrota.db";
 
-    // Table Names
+
+    //    private static final String CREATE_TABLE = "CREATE TABLE "+TABLE_NAME+" ("+COLUMN_ID+" INTEGER PRIMARY KEY AUTOINCREMENT,"+COLUMN_DESCRIPTION+" TEXT,"+
+    //    COLUMN_DATE+" DATE,"+COLUMN_DONE+" BOOLEAN)";
+    //    SQLiteDatabase db;
+
+
     private static final String TABLE_USUARIO = "usuario";
     private static final String TABLE_ABASTECIMENTO = "abastecimento";
     private static final String TABLE_VEICULO = "veiculo";
@@ -139,7 +147,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 COLUMN_ABASTECIMENTOID + " INTEGER PRIMARY KEY," +
                 COLUMN_DATAABASTECIMENTO + " TEXT" +
                 COLUMN_KMABASTECIMENTO + " TEXT," +
-                COLUMN_SENHA + " TEXT," +
                 COLUMN_LITROSABASTECIMENTO + " TEXT," +
                 COLUMN_MESANOABASTECIMENTO + " TEXT," +
                 COLUMN_PLACAABASTECIMENTO + " TEXT," +
@@ -209,9 +216,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
         }catch (Exception e){
+
             Log.d( "ALERTA", "Erro ao Registrar Usuario");
+
         }finally {
             db.endTransaction();
+            Log.d( "ALERTA", "Usuario Cadastrado com Sucesso!");
         }
 
 
@@ -250,11 +260,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public void RegistrarAbastecimento(Abastecimento abastecimento, String msg) {
+    public void RegistrarAbastecimento(Abastecimento abastecimento) {
+
+        Log.d( "ALERTA", "Erro ao Registrar Abastecimento");
         SQLiteDatabase db = getWritableDatabase();
         db.beginTransaction();
         try {
 
+            ContentValues values = new ContentValues();
+            values.put(COLUMN_DATAABASTECIMENTO, (String.valueOf(abastecimento.getDataAbastecimento())));
+            values.put(COLUMN_KMABASTECIMENTO, abastecimento.getKmAbastecimento());
+            values.put(COLUMN_LITROSABASTECIMENTO, abastecimento.getLitrosAbastecimento());
+            values.put(COLUMN_MESANOABASTECIMENTO, abastecimento.getMesAnoAbastecimento());
+            values.put(COLUMN_PLACAABASTECIMENTO, abastecimento.getPlacaAbastecimento());
+            values.put(COLUMN_USUARIOID_FK, abastecimento.getUsuarioId());
+            values.put(COLUMN_VEICULOID_FK, abastecimento.getVeiculoId());
+
+
+            db.insert(TABLE_ABASTECIMENTO, null, values);
+            db.setTransactionSuccessful();
             //Inserir Comandos de Banco put
         } catch (Exception e) {
             Log.d( "ALERTA", "Erro ao Registrar Abastecimento");

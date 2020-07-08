@@ -46,31 +46,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if (view.getId() == R.id.button_logar) {
             String cpf = this.mViewHolder.editCpf.getText().toString();
-            EditText a = this.mViewHolder.editCpf;
             String senha = this.mViewHolder.editSenha.getText().toString();
-          
-            Toast.makeText(this, a.toString(), Toast.LENGTH_LONG).show();
-
             if ("".equals(cpf) || "".equals(senha)) {
                 //Mostrar mensagem de campos vazios
                 Toast.makeText(this, this.getString(R.string.preencha_campos), Toast.LENGTH_LONG).show();
             } else {
-                EditText c = (EditText) findViewById(R.id.edit_cpf);
-                String str = c.toString();
-                EditText b = (EditText) findViewById(R.id.edit_senha);
-                String pass = b.toString();
+//                EditText c = (EditText) findViewById(R.id.edit_cpf);
+//                String str = c.toString();
+//                EditText b = (EditText) findViewById(R.id.edit_senha);
+//                String pass = b.toString();
 
                 // helper.encontrarSenha();
-
+                Intent i = new Intent(this, CadastroAbastecimentoActivity.class);
+                startActivity(i);
                 Toast.makeText(this, "Que bom que voltou!", Toast.LENGTH_LONG).show();
 
 
             }
 
         } else if (view.getId() == R.id.button_cadastrar) {
-            Toast.makeText(this, "Registrar", Toast.LENGTH_LONG).show();
+
             Intent i = new Intent(this, CadastroUsuariosActivity.class);
             startActivity(i);
+            Toast.makeText(this, "Registrar Usuario", Toast.LENGTH_SHORT).show();
+
             // i.putExtra("Username", str );
 
 

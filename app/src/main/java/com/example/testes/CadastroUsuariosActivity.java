@@ -13,9 +13,9 @@ import com.example.testes.model.Usuario;
 
 public class CadastroUsuariosActivity extends AppCompatActivity implements View.OnClickListener {
 
-
+    private DatabaseHelper helper;
     private CadastroUsuariosActivity.ViewHolder mViewHolder = new CadastroUsuariosActivity.ViewHolder();
-    DatabaseHelper helper = new DatabaseHelper(this);
+   // DatabaseHelper helper = new DatabaseHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +85,9 @@ public class CadastroUsuariosActivity extends AppCompatActivity implements View.
                     user.setUnidade(unidade);
                     user.setSenha(senha);
 
-                    helper.RegistrarUsuario(user);
+                   helper.RegistrarUsuario(user);
+
+                    Toast.makeText(this, "Cadastro", Toast.LENGTH_LONG).show();
 
                 }
 

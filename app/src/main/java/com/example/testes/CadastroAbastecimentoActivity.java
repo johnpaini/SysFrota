@@ -1,16 +1,28 @@
 package com.example.testes;
 
+import android.icu.text.SimpleDateFormat;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class CadastroAbastecimentoActivity extends AppCompatActivity implements View.OnClickListener {
+import com.example.testes.model.Abastecimento;
+import com.example.testes.model.DatabaseHelper;
+import com.example.testes.model.Usuario;
 
+import java.text.ParseException;
+import java.util.Date;
+
+public class CadastroAbastecimentoActivity extends AppCompatActivity implements View.OnClickListener {
+    private DatabaseHelper helper;
     private CadastroAbastecimentoActivity.ViewHolder mViewHolder = new CadastroAbastecimentoActivity.ViewHolder();
+  // DatabaseHelper helper = new DatabaseHelper(this);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,10 +60,11 @@ public class CadastroAbastecimentoActivity extends AppCompatActivity implements 
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onClick(View view) {
-
-        if (view.getId() == R.id.button_inscrever) {
+//        Toast.makeText(this, "chegou aqui", Toast.LENGTH_SHORT).show();
+        if (view.getId() == R.id.button_cadastrar_abastecimento) {
             String dataAbastecimento = this.mViewHolder.editDataAbastecimento.getText().toString();
             String formaPagamento = this.mViewHolder.editFormaPagamento.getText().toString();
             String kmAbastecimento = this.mViewHolder.editKmAbastecimento.getText().toString();
@@ -69,8 +82,28 @@ public class CadastroAbastecimentoActivity extends AppCompatActivity implements 
                 //Mostrar mensagem de campos vazios
                 Toast.makeText(this, this.getString(R.string.preencha_campos), Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, "chegou aqui", Toast.LENGTH_LONG).show();
-                this.mViewHolder.editDataAbastecimento.setText(("Eba"));
+                Abastecimento abastecimento = new Abastecimento();
+                abastecimento.setResponsavelAbastecimento(responsavelAbastecimento);
+                abastecimento.setValorAbastecimento(valorAbastecimento);
+                abastecimento.setPlacaAbastecimento(placaAbastecimento);
+                abastecimento.setMesAnoAbastecimento(mesAnoAbastecimento);
+                abastecimento.setLocalAbastecimento(localAbastecimento);
+                SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+                Date data = null;
+                try {
+                    data = formato.parse(dataAbastecimento);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+                abastecimento.setUsuarioId(1);
+                abastecimento.setVeiculoId(1);
+
+
+              ;
+
+               helper.RegistrarAbastecimento(abastecimento);
+
 
             }
 
