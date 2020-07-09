@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="8dp"
@@ -11,6 +11,14 @@
     android:background="@color/colorLight"
     android:padding="8dp"
     tools:context=".MainActivity">
+<!--    Itinerario itinerario;-->
+<!--    Usuario usuario;-->
+<!--    Veiculo veiculo;-->
+<!--    Date data;-->
+<!--    Integer kmInicial, KmFinal, kmTotal;-->
+<!--    String horaInicial, horaFinal;-->
+<!--    Vistoria vistoria;-->
+<!--    String MesAno;-->
 
 
 
@@ -18,11 +26,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/nome"
+        android:text="@string/Itinerario"
         android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/edit_nome"
+        android:id="@+id/edit_itinerario"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
@@ -33,12 +41,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="@string/cpf"
+        android:text="@string/Veiculo"
         android:textSize="25sp" />
 
 
     <EditText
-        android:id="@+id/edit_cpf"
+        android:id="@+id/edit_veiculo"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
@@ -141,6 +149,16 @@
         android:onClick="submit"
         android:text="@string/inscrever"
         android:textColor="@color/colorLight" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <CalendarView
+        android:id="@+id/calendarView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>

@@ -54,6 +54,9 @@
     <string name="registrar">Registrar</string>
     <string name="button_cadastrar">Cadastrar</string>
     <string name="button_inscrever">LOGAR</string>
+    <string name="itinerario">Itinerario</string>
+    <string name="Itinerario">Itinerario</string>
+    <string name="Veiculo">Veiculo</string>
 
 
 </resources>
