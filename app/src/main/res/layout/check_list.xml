@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="8dp"
@@ -12,6 +12,10 @@
     android:padding="8dp"
     tools:context=".MainActivity">
 
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,12 +23,17 @@
         android:textSize="25sp"
         android:text="@string/documentos" />
 
-    <EditText
-        android:id="@+id/edit_documentos"
-        android:layout_width="300dp"
-        android:layout_gravity="left"
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="131dp"
         android:layout_height="wrap_content"
-        android:text="" />
+        android:text="RadioButton" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="129dp"
+        android:layout_height="wrap_content"
+        android:text="RadioButton" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -34,33 +43,36 @@
         android:text="@string/luzes" />
 
 
-
-    <EditText
-        android:id="@+id/edit_luzes"
-        android:layout_width="300dp"
-        android:layout_marginTop="25sp"
-        android:layout_gravity="left"
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="126dp"
         android:layout_height="wrap_content"
-        android:inputType="numberSigned"
-        android:text="" />
+        android:text="RadioButton" />
+
+    <RadioButton
+        android:id="@+id/radioButton4"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:text="RadioButton" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:textSize="25sp"
-        android:text="@string/pneus" />
+        android:text="@string/pneus"
+        android:textSize="25sp" />
 
-
-
-    <EditText
-        android:id="@+id/edit_pneus"
-        android:layout_width="300dp"
-        android:layout_marginTop="25sp"
-        android:layout_gravity="center"
+    <RadioButton
+        android:id="@+id/radioButton5"
+        android:layout_width="126dp"
         android:layout_height="wrap_content"
-        android:inputType="numberPassword"
-        android:text="" />
+        android:text="RadioButton" />
+
+    <RadioButton
+        android:id="@+id/radioButton6"
+        android:layout_width="126dp"
+        android:layout_height="wrap_content"
+        android:text="RadioButton" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -70,15 +82,17 @@
         android:text="@string/chave_roda" />
 
 
-
-    <EditText
-        android:id="@+id/edit_chave_roda"
-        android:layout_width="300dp"
-        android:layout_marginTop="25sp"
-        android:layout_gravity="left"
+    <RadioButton
+        android:id="@+id/radioButton7"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="date"
-        android:text="" />
+        android:text="RadioButton" />
+
+    <RadioButton
+        android:id="@+id/radioButton8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RadioButton" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -88,15 +102,17 @@
         android:text="@string/estepe" />
 
 
-
-    <EditText
-        android:id="@+id/edit_estepe"
-        android:layout_width="300dp"
-        android:layout_marginTop="25sp"
-        android:layout_gravity="left"
+    <RadioButton
+        android:id="@+id/radioButton9"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberSigned"
-        android:text="" />
+        android:text="RadioButton" />
+
+    <RadioButton
+        android:id="@+id/radioButton10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RadioButton" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -106,15 +122,17 @@
         android:text="@string/macaco" />
 
 
-
-    <EditText
-        android:id="@+id/edit_macaco"
-        android:layout_width="300dp"
-        android:layout_marginTop="25sp"
-        android:layout_gravity="left"
+    <RadioButton
+        android:id="@+id/radioButton11"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberSigned"
-        android:text="" />
+        android:text="RadioButton" />
+
+    <RadioButton
+        android:id="@+id/radioButton12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RadioButton" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -124,15 +142,17 @@
         android:text="@string/lataria" />
 
 
-
-    <EditText
-        android:id="@+id/edit_lataria"
-        android:layout_width="300dp"
-        android:layout_marginTop="25sp"
-        android:layout_gravity="left"
+    <RadioButton
+        android:id="@+id/radioButton13"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberSigned"
-        android:text="" />
+        android:text="RadioButton" />
+
+    <RadioButton
+        android:id="@+id/radioButton14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RadioButton" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -142,15 +162,25 @@
         android:text="@string/observacoes_gerais" />
 
 
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <EditText
-        android:id="@+id/edit_observacoes_gerais"
-        android:layout_width="300dp"
-        android:layout_marginTop="25sp"
-        android:layout_gravity="left"
-        android:layout_height="wrap_content"
-        android:inputType="numberSigned"
-        android:text="" />
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine" />
 
     <Button
         android:id="@+id/button_inscrever"
@@ -159,8 +189,8 @@
         android:layout_marginTop="50dp"
         android:background="@color/colorAccent"
         android:onClick="submit"
-        android:textColor="@color/colorLight"
-        android:text="@string/inscrever" />
+        android:text="@string/inscrever"
+        android:textColor="@color/colorLight" />
 
 
 </LinearLayout>

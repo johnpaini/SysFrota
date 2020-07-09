@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastroVeiculoActivity">
+
+    <Button
+        android:id="@+id/itinerario"
+        android:layout_width="140dp"
+        android:layout_height="65dp"
+        android:background="@color/colorPrimary"
+        android:text="Usuarios"
+        android:textColor="@color/colorLight"
+        tools:layout_editor_absoluteX="236dp"
+        tools:layout_editor_absoluteY="464dp" />
+
+    <Button
+        android:id="@+id/percurso"
+        android:layout_width="140dp"
+        android:layout_height="65dp"
+        android:background="@color/colorPrimary"
+        android:text="Percurso"
+        android:textColor="@color/colorLight"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="225dp" />
+
+    <Button
+        android:id="@+id/vistoria"
+        android:layout_width="140dp"
+        android:layout_height="65dp"
+        android:background="@color/colorPrimary"
+        android:text="Vistoria"
+        android:textColor="@color/colorLight"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="345dp" />
+
+    <Button
+        android:id="@+id/veiculos"
+        android:layout_width="140dp"
+        android:layout_height="65dp"
+        android:background="@color/colorPrimary"
+        android:text="Veiculos"
+        android:textColor="@color/colorLight"
+        tools:layout_editor_absoluteX="236dp"
+        tools:layout_editor_absoluteY="345dp" />
+
+    <Button
+        android:id="@+id/abastecimento"
+        android:layout_width="140dp"
+        android:layout_height="65dp"
+        android:background="@color/colorPrimary"
+        android:text="Abastecimentos"
+        android:textColor="@color/colorLight"
+        tools:layout_editor_absoluteX="236dp"
+        tools:layout_editor_absoluteY="225dp" />
+
+    <Button
+        android:id="@+id/usuarios"
+        android:layout_width="140dp"
+        android:layout_height="65dp"
+        android:background="@color/colorPrimary"
+        android:text="Usuarios"
+        android:textColor="@color/colorLight"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="464dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

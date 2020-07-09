@@ -11,7 +11,7 @@ public class Percurso {
     Integer kmInicial, KmFinal, kmTotal;
     String horaInicial, horaFinal;
     Vistoria vistoria;
-
+    String MesAno;
 
     @Override
     public String toString() {
@@ -30,7 +30,7 @@ public class Percurso {
                 '}';
     }
 
-    String MesAno;
+
 
     public Itinerario getItinerario() {
         return itinerario;
