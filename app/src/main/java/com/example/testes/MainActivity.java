@@ -59,7 +59,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // helper.encontrarSenha();
 
 
-                Intent i = new Intent(this, CadastroAbastecimentoActivity.class);
+//                Intent i = new Intent(this, CadastroAbastecimentoActivity.class);
+//                startActivity(i);
+                Intent i = new Intent(this, OptionsActivity.class);
                 startActivity(i);
                 Toast.makeText(this, "Que bom que voltou!", Toast.LENGTH_LONG).show();
 

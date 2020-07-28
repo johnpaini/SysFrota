@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastroVeiculoActivity">
+    tools:context=".OptionsActivity">
 
     <Button
-        android:id="@+id/itinerario"
+        android:id="@+id/button_itinerario"
         android:layout_width="140dp"
         android:layout_height="65dp"
         android:background="@color/colorPrimary"
@@ -17,7 +17,7 @@
         tools:layout_editor_absoluteY="464dp" />
 
     <Button
-        android:id="@+id/percurso"
+        android:id="@+id/button_percurso"
         android:layout_width="140dp"
         android:layout_height="65dp"
         android:background="@color/colorPrimary"
@@ -27,7 +27,7 @@
         tools:layout_editor_absoluteY="225dp" />
 
     <Button
-        android:id="@+id/vistoria"
+        android:id="@+id/button_vistoria"
         android:layout_width="140dp"
         android:layout_height="65dp"
         android:background="@color/colorPrimary"
@@ -37,7 +37,7 @@
         tools:layout_editor_absoluteY="345dp" />
 
     <Button
-        android:id="@+id/veiculos"
+        android:id="@+id/button_veiculos"
         android:layout_width="140dp"
         android:layout_height="65dp"
         android:background="@color/colorPrimary"
@@ -47,7 +47,7 @@
         tools:layout_editor_absoluteY="345dp" />
 
     <Button
-        android:id="@+id/abastecimento"
+        android:id="@+id/button_abastecimento"
         android:layout_width="140dp"
         android:layout_height="65dp"
         android:background="@color/colorPrimary"
@@ -57,7 +57,7 @@
         tools:layout_editor_absoluteY="225dp" />
 
     <Button
-        android:id="@+id/usuarios"
+        android:id="@+id/button_usuarios"
         android:layout_width="140dp"
         android:layout_height="65dp"
         android:background="@color/colorPrimary"

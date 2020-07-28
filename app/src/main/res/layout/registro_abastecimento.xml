@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="8dp"
@@ -31,7 +31,7 @@
     <EditText
         android:id="@+id/edit_responsavel_abastecimento"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="31dp"
         android:layout_gravity="left"
         android:layout_marginTop="5sp"
         android:text="" />
@@ -47,7 +47,7 @@
     <EditText
         android:id="@+id/edit_placa_abastecimento"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
         android:layout_gravity="left"
         android:layout_marginTop="5sp"
         android:text="" />
@@ -63,7 +63,7 @@
     <EditText
         android:id="@+id/edit_mes_ano_abastecimento"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="38dp"
         android:layout_gravity="left"
         android:layout_marginTop="5sp"
         android:text="" />
@@ -79,7 +79,7 @@
     <EditText
         android:id="@+id/edit_data_abastecimento"
         android:layout_width="160dp"
-        android:layout_height="wrap_content"
+        android:layout_height="39dp"
         android:layout_gravity="left"
         android:layout_marginTop="5sp"
         android:text="" />
@@ -97,7 +97,7 @@
     <EditText
         android:id="@+id/local_abastecimento"
         android:layout_width="160dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_gravity="left"
         android:layout_marginTop="5sp"
         android:inputType="text"
@@ -113,11 +113,11 @@
 
     <EditText
         android:id="@+id/edit_forma_pagamento"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
         android:layout_gravity="left"
         android:layout_marginTop="5sp"
-        android:inputType="text"
+        android:inputType="numberSigned"
         android:text="" />
 
     <TextView
@@ -130,8 +130,8 @@
 
     <EditText
         android:id="@+id/edit_km_abastecimento"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_width="105dp"
+        android:layout_height="31dp"
         android:layout_gravity="left"
         android:layout_marginTop="5sp"
         android:inputType="numberSigned"
@@ -147,8 +147,8 @@
 
     <EditText
         android:id="@+id/edit_litros_abastecimento"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
+        android:layout_width="135dp"
+        android:layout_height="31dp"
         android:layout_gravity="left"
         android:layout_marginTop="5sp"
         android:inputType="numberSigned"
@@ -164,7 +164,7 @@
     <EditText
         android:id="@+id/edit_valor_abastecimento"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
         android:layout_gravity="left"
         android:layout_marginTop="5sp"
         android:inputType="numberDecimal"
@@ -180,6 +180,18 @@
         android:onClick="submit"
         android:text="@string/cadastrar_abastecimento"
         android:textColor="@color/colorLight" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RadioButton" />
+
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RadioButton" />
 
 
 </LinearLayout>

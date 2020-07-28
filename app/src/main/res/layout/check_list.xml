@@ -12,147 +12,60 @@
     android:padding="8dp"
     tools:context=".MainActivity">
 
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="25sp"
-        android:text="@string/documentos" />
-
-    <RadioButton
-        android:id="@+id/radioButton"
-        android:layout_width="131dp"
-        android:layout_height="wrap_content"
-        android:text="RadioButton" />
-
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="129dp"
-        android:layout_height="wrap_content"
-        android:text="RadioButton" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:textSize="25sp"
-        android:text="@string/luzes" />
-
-
-    <RadioButton
-        android:id="@+id/radioButton3"
-        android:layout_width="126dp"
-        android:layout_height="wrap_content"
-        android:text="RadioButton" />
-
-    <RadioButton
-        android:id="@+id/radioButton4"
-        android:layout_width="126dp"
-        android:layout_height="wrap_content"
-        android:text="RadioButton" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/pneus"
+        android:text="Check-Up"
         android:textSize="25sp" />
 
-    <RadioButton
-        android:id="@+id/radioButton5"
-        android:layout_width="126dp"
-        android:layout_height="wrap_content"
-        android:text="RadioButton" />
-
-    <RadioButton
-        android:id="@+id/radioButton6"
-        android:layout_width="126dp"
-        android:layout_height="wrap_content"
-        android:text="RadioButton" />
-
-    <TextView
+    <CheckBox
+        android:id="@+id/checkBox4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textSize="25sp"
+        android:text="Documentos" />
+
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/luzes" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pneus" />
+
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/chave_roda" />
 
 
-    <RadioButton
-        android:id="@+id/radioButton7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RadioButton" />
-
-    <RadioButton
-        android:id="@+id/radioButton8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RadioButton" />
-
-    <TextView
+    <CheckBox
+        android:id="@+id/checkBox5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textSize="25sp"
         android:text="@string/estepe" />
 
 
-    <RadioButton
-        android:id="@+id/radioButton9"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RadioButton" />
-
-    <RadioButton
-        android:id="@+id/radioButton10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RadioButton" />
-
-    <TextView
+    <CheckBox
+        android:id="@+id/checkBox4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textSize="25sp"
         android:text="@string/macaco" />
 
 
-    <RadioButton
-        android:id="@+id/radioButton11"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RadioButton" />
-
-    <RadioButton
-        android:id="@+id/radioButton12"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RadioButton" />
-
-    <TextView
+    <CheckBox
+        android:id="@+id/checkBox6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:textSize="25sp"
         android:text="@string/lataria" />
-
-
-    <RadioButton
-        android:id="@+id/radioButton13"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RadioButton" />
-
-    <RadioButton
-        android:id="@+id/radioButton14"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RadioButton" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -189,7 +102,7 @@
         android:layout_marginTop="50dp"
         android:background="@color/colorAccent"
         android:onClick="submit"
-        android:text="@string/inscrever"
+        android:text="@string/registrar"
         android:textColor="@color/colorLight" />
 
 
