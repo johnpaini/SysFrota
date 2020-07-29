@@ -57,6 +57,7 @@
     <string name="itinerario">Itinerario</string>
     <string name="Itinerario">Itinerario</string>
     <string name="Veiculo">Veiculo</string>
+    <string name="cadastrar_percurso">Cadastrar</string>
 
 
 </resources>

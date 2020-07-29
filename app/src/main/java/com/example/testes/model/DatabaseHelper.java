@@ -285,6 +285,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         }
     }
+    public void RegistrarPercurso(Percurso percurso) {
+
+        Log.d( "ALERTA", "Erro ao Registrar Percurso");
+        SQLiteDatabase db = getWritableDatabase();
+        db.beginTransaction();
+        try {
+
+       ContentValues values = new ContentValues();
+//            values.put(COLUMN_DATAPERCURSO, (String.valueOf(percurso.getData())));
+//            values.put(COLLUMN_HORA_FINAL, percurso.getHoraFinal());
+//            values.put(COLUMN_LITROSABASTECIMENTO, percurso.getLitrosAbastecimento());
+//            values.put(COLUMN_MESANOABASTECIMENTO, percurso.getMesAnoAbastecimento());
+//            values.put(COLUMN_PLACAABASTECIMENTO, percurso.getPlacaAbastecimento());
+//            values.put(COLUMN_USUARIOID_FK, percurso.getUsuarioId());
+//            values.put(COLUMN_VEICULOID_FK, percurso.getVeiculoId());
+
+
+            db.insert(TABLE_PERCURSO, null, values);
+            db.setTransactionSuccessful();
+            //Inserir Comandos de Banco put
+        } catch (Exception e) {
+            Log.d( "ALERTA", "Erro ao Registrar Percurso");
+
+        }
+    }
 
     public int updateAbastecimento(Abastecimento abastecimento) {
         SQLiteDatabase db = this.getWritableDatabase();

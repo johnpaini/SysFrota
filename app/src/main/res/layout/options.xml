@@ -1,30 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OptionsActivity">
+    android:layout_margin="8dp"
+    android:orientation="vertical"
+    android:background="@color/colorLight"
+    android:padding="8dp"    tools:context=".OptionsActivity">
 
-    <Button
-        android:id="@+id/button_itinerario"
-        android:layout_width="140dp"
-        android:layout_height="65dp"
-        android:background="@color/colorPrimary"
-        android:text="Usuarios"
-        android:textColor="@color/colorLight"
-        tools:layout_editor_absoluteX="236dp"
-        tools:layout_editor_absoluteY="464dp" />
 
-    <Button
-        android:id="@+id/button_percurso"
-        android:layout_width="140dp"
-        android:layout_height="65dp"
-        android:background="@color/colorPrimary"
-        android:text="Percurso"
-        android:textColor="@color/colorLight"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="225dp" />
 
     <Button
         android:id="@+id/button_vistoria"
@@ -66,4 +53,5 @@
         tools:layout_editor_absoluteX="70dp"
         tools:layout_editor_absoluteY="464dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+</ScrollView>

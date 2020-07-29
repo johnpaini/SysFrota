@@ -111,7 +111,7 @@ public class CadastroAbastecimentoActivity extends AppCompatActivity implements 
 
     }
 
-    private static class ViewHolder {
+    static class ViewHolder {
         EditText editDataAbastecimento;
         EditText editKmAbastecimento;
         EditText editLitrosAbastecimento;

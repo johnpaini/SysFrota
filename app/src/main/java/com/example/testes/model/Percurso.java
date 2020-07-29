@@ -4,13 +4,13 @@ import java.util.Date;
 
 public class Percurso {
     int id;
-    Itinerario itinerario;
-    Usuario usuario;
-    Veiculo veiculo;
+    int itinerario;
+    int usuario;
+    int veiculo;
     Date data;
     Integer kmInicial, KmFinal, kmTotal;
     String horaInicial, horaFinal;
-    Vistoria vistoria;
+    int vistoria;
     String MesAno;
 
     @Override
@@ -30,40 +30,35 @@ public class Percurso {
                 '}';
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    public Itinerario getItinerario() {
+    public int getItinerario() {
         return itinerario;
     }
 
-    public void setItinerario(Itinerario itinerario) {
+    public void setItinerario(int itinerario) {
         this.itinerario = itinerario;
     }
 
-
-
-
-    public String getMesAno() {
-        return MesAno;
-    }
-
-    public void setMesAno(String mesAno) {
-        MesAno = mesAno;
-    }
-
-    public Usuario getUsuario() {
+    public int getUsuario() {
         return usuario;
     }
 
-    public void setUsuario(Usuario usuario) {
+    public void setUsuario(int usuario) {
         this.usuario = usuario;
     }
 
-    public Veiculo getVeiculo() {
+    public int getVeiculo() {
         return veiculo;
     }
 
-    public void setVeiculo(Veiculo veiculo) {
+    public void setVeiculo(int veiculo) {
         this.veiculo = veiculo;
     }
 
@@ -115,11 +110,21 @@ public class Percurso {
         this.horaFinal = horaFinal;
     }
 
-    public Vistoria getVistoria() {
+    public int getVistoria() {
         return vistoria;
     }
 
-    public void setVistoria(Vistoria vistoria) {
+    public void setVistoria(int vistoria) {
         this.vistoria = vistoria;
     }
+
+    public String getMesAno() {
+        return MesAno;
+    }
+
+    public void setMesAno(String mesAno) {
+        MesAno = mesAno;
+    }
+
+
 }

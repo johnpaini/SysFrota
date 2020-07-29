@@ -19,7 +19,7 @@
         <activity android:name=".CadastroAbastecimentoActivity"></activity>
         <activity android:name=".CadastroUsuariosActivity"></activity>
         <activity android:name=".CadastroVeiculoActivity"></activity>
-        <activity android:name=".CadastroItinerarioActivity"></activity>
+        <activity android:name=".OptionsActivity"></activity>
     </application>
 
 </manifest>
